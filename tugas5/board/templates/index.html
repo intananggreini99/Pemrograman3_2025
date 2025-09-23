@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intan's Site</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Bruno+Ace+SC&family=Castoro+Titling&family=Caveat&family=EB+Garamond:ital@1&family=Finger+Paint&family=Gochi+Hand&family=Gruppo&family=Hachi+Maru+Pop&family=Pompiere&family=Poppins:ital,wght@0,200;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c15cd15afd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- MY STYLES -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#home"><img class="logo-home" src="{{ url_for('static', filename='img/logo-home.png') }}" alt="" /></a>
+      <div class="navbar-outside">
+        <ul type="none" class="slide">
+          <li><a href="#about"><i class="fa-solid fa-user fa-xl" style="color:#ffffff;margin-top:10px;"></i></a></li>
+          <li><a href="#study"><i class="fa-solid fa-graduation-cap fa-xl" style="color:#ffffff;margin-top:10px;"></i></a></li>
+          <li><a href="#experience"><i class="fa-solid fa-bookmark fa-xl" style="color:#ffffff;margin-top:10px;"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-house fa-xl" style="color:#ffffff;margin-top:10px;"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-plus">
+        <input type="checkbox">
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->     
+
+    <!-- Opening home -->
+    <section class="open-home" id="home">
+      <div class="opening">
+        <h1 class="home-name"><span class="name-one">Intan </span><span class="name-two">Anggreini</span></h1>
+        <h3 class="cd-intro" >
+          <div class="cd-headline clip is-full-width">
+            <span class="word-one">I'm a</span>
+            <span class="cd-words-wrapper">
+              <b class="is-visible">Student in SMEKSA</b><b>Dreamer</b><b>Slave of ALLAH</b>
+            </span>
+          </div>  
+        </h3>
+      </div>
+    </section>
+    <!-- End home -->
+
+    <!-- About Start -->
+    <section class="about" id="about">
+      <h2><span>About </span><span class="tajuk-about">Me</span></h2>
+      <div class="row">  
+        <div class="gweh-img">
+          <img src="{{ url_for('static', filename='img/gweh.png') }}" alt="This is ME">
+        </div>
+        <div class="narasi-about">
+          <h3>Who am i?</h3>
+          <h4>My name is Intan Dwi Anggreini. I'm a vocational high school student.</h4>
+          <p class="p-one">Saat ini saya mengenyam pendidikan kejuruan teknik komputer jaringan dan telekomunikasi (TKJ) di SMKN 1 Kediri</p>
+          <p class="p-two">Pembuatan website portofolio ini dilaksanakan berdasarkan tugas akhir semester 4 dari mata pelajaran Pilihan Kejuruan (PIL-TKJ)</p>
+          <p class="sosmed">
+            <span><i data-feather="linkedin"></i></span>
+            <span><a href="mailto:d.anggrreiniintan910@gmail.com"><i data-feather="mail"></i></a></span>
+            <span><a href="https://wa.me/qr/OHVPK62SJ45JC1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></span>
+            <span><i data-feather="send"></i></span>
+            <span><i data-feather="facebook"></i></span>
+            <span><a href="https://www.instagram.com/iiintan____" target="_blank"><i data-feather="instagram"></i></a></span>
+            <span><a href="https://twitter.com/IntanAnggreini5" target="_blank"><i data-feather="twitter"></i></a></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Bar Start -->
+    <div class="study" id="study"></div>
+    <section class="bookmark" id="bookmark">
+      <h2 class="bookmark-title"><span style="margin-left:0px;margin-right:0px;">Edu</span><span class="tajuk-bookmark">cation</span></h2>
+      <span class="inti-bookmark">My Education Background</span>
+      <div class="container-edu">
+        <main class="row-edu">
+          <!-- Edu-Formal Section Start -->
+          <section class="column">
+            <div class="title">
+              <div class="complex">
+                <i><img src="{{ url_for('static', filename='img/icon/formal.svg') }}" alt=""></i>
+                <h2>Formal</h2>
+              </div>
+            </div>
+            <div class="content">
+              <div class="box">
+                <h4><i class="material-icons">calendar_month</i> 2012 -2018</h4>
+                <h3>SD Negeri Banjarmlati 1</h3>
+                <p>Elementary School</p>
+                <p>Gg. Masjid No.1, Banjarmlati, Kec. Mojoroto, Kabupaten Kediri, Jawa Timur</p>
+              </div>
+              <div class="box">
+                <h4><i class="material-icons">calendar_month</i> 2019 - 2021</h4>
+                <h3>MTs Negeri 1 Kota Kediri</h3>
+                <p>Junior High School</p>
+                <p>Jl. Raung No.87, Bandar Kidul, Kec. Mojoroto, Kota Kediri, Jawa Timur</p>
+              </div>
+              <div class="box">
+                <h4><i class="material-icons">calendar_month</i> 2022 - Right Now</h4>
+                <h3>SMK Negeri 1 Kediri</h3>
+                <p>Vocational High School</p>
+                <p>Jl. Veteran No.9, Mojoroto, Kec. Mojoroto, Kota Kediri, Jawa Timur</p>
+              </div>
+            </div>
+          </section>
+          <!-- Edu-Non Formal Section Starts -->
+          <section class="column">
+            <div class="title">
+              <div class="complex">
+                <i><img src="{{ url_for('static', filename='img/icon/non-formal.svg') }}" alt=""></i>
+                <h2>Non - Formal</h2>
+              </div>
+            </div>
+            <div class="content">
+              <div class="box">
+                <h4><i class="material-icons">calendar_month</i> 2017-2019</h4>
+                <h3>Ponpes Putri Tahfidzil Qur'an Al Mukhtar</h3>
+                <p>Al Qur'aniy</p>
+                <p>Sidomulyo, Kec. Semen, Kab. Kediri, Jawa Timur</p>
+              </div>
+              <div class="box">
+                <h4><i class="material-icons">calendar_month</i> 2019 - 2021</h4>
+                <h3>Ponpes Unit Darussalam Lirboyo</h3>
+                <p>Dars Tsanawiy</p>
+                <p>Jl. H. Winarto No.40, Campurejo, Kec. Mojoroto, Kota Kediri, Jawa Timur</p>
+              </div>
+              <div class="box">
+                <h4><i class="material-icons">calendar_month</i> 2023/2024</h4>
+                <h3>Ponpes Tsuroyya Al Falah Ploso</h3>
+                <p>Dars Tsanawiy</p>
+                <p>Jl. Raya Mojo, Ploso, Kec. Mojo, Kabupaten Kediri, Jawa Timur</p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Bookmark Start -->
+    <div class="experience" id="experience"></div>
+    <section class="bookmark" id="bookmark">
+      <h2 class="bookmark-title"><span>My Journey </span><span class="tajuk-bookmark">in School</span></h2>
+      <span class="inti-bookmark">My School Activities</span>
+      <section class="sertijab">
+        <div class="row">
+          <div class="img-bookmark">
+            <img src="{{ url_for('static', filename='img/bookmark/sertijab.png') }}" alt="">
+          </div>
+          <div class="narasi-bookmark">
+            <h3>SERTIJAB Pengurus OSIS Masa Bhakti 2021/2022</h3>
+            <h5>SERTIJAB - Serah Terima Jabatan</h5>
+            <span><i class="material-icons">location_on</i> SMKN Negeri 1 Kediri</span>
+            <p>Ini adalah momentum pergantian dan penyerahan jabatan para anggota penanggung jawab organisasi yang lama (tingkat 2 yang akan menjadi tingkat 3) kepada para anggota organisasi tingkat selanjutnya (tingkat 1 yang akan menjadi tingkat 2).</p>
+          </div>
+      </section>
+      <section class="eldeka">
+        <div class="row">
+          <div class="img-bookmark">
+            <img src="{{ url_for('static', filename='img/bookmark/leadership.PNG') }}" alt="">
+          </div>
+          <div class="narasi-bookmark">
+            <h3>LDK Siswa SMKN 1 Kediri 2022</h3>
+            <h5>LDK - Latihan Dasar Kepemimpinan</h5>
+            <span><i class="material-icons">location_on</i> Trawas, Mojokerto, East Java</span>
+            <p>Latihan Dasar Kepemimpinan merupakan suatu program kerja pada organisasi yang memberi pelatihan untuk pembentukan jiwa kepemimpinan.</p>
+          </div>
+      </section>
+      <section class="k-industri">
+        <div class="row">
+          <div class="img-bookmark">
+            <img src="{{ url_for('static', filename='img/bookmark/k-industri.png') }}" alt="">
+          </div>
+          <div class="narasi-bookmark">
+            <h3>KI TKJ SMKN 1 Kediri 2022</h3>
+            <h5>KI - Kunjungan Industri</h5>
+            <span><i class="material-icons">location_on</i> SMKN Negeri 1 Kediri</span>
+            <p>Kunjungan industri (KI) merupakan salah satu jenis kegiatan pembelajaran di luar lingkungan sekolah.</p>
+          </div>
+        </section> 
+    </section>
+    
+    <!-- Bookmark End -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,811 @@
+:root {
+  --primary: #beb63d;
+  --bg: #010101;
+  --navbar: #ffc506;
+  --oke: #a0145a;
+  --oke2: #f891d1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 25%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 2000px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-content: center;
+  height: 70px;
+  padding: 10px 0px;
+  background-color: var(--navbar); /* rgba(1, 1, 1, 0.1); */
+  border-bottom: 1px solid var(--oke);
+  border-width: 8px;
+  /*agar navbar terletak di paling atas  */
+  position: fixed;
+  top: 0;
+  /*agar navbar memenuhi samping kiri dan kanan*/
+  left: 0;
+  right: 0;
+  /* agar navbar selalu berada diatas */
+  z-index: 999; /*agar menjadi priority elemen/tidak tertumpuk elemen lain */
+}
+
+/* .navbar img.logo-home {
+  height: 3rem;
+} */
+
+/* Navbar Outside */
+.navbar div.navbar-outside ul,
+a {
+  display: flex;
+  justify-content: space-around;
+  /* align-content: center; */
+  color: var(--oke);
+  padding: 0px 10px;
+  font-size: 4rem;
+}
+
+/* Navbar Plus */
+.navbar div.navbar-plus a {
+  color: var(--oke);
+  position: relative;
+}
+
+.navbar div.navbar-plus a {
+  display: inline-block;
+}
+
+.navbar div.navbar-plus input {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Untuk menata keselarasan letak antar navbar dengan logo*/
+.navbar div.navbar-outside,
+div.navbar-plus {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding: 10px 0px;
+}
+
+/* Memberi efek ketika navbar outside & plus diklik icon berubah warna */
+.navbar div.navbar-outside a:hover,
+div.navbar-plus a:hover {
+  color: var(--primary);
+}
+
+.open-home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/3-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Mengatur Opacity background color black */
+.open-home::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg);
+  opacity: 0.5;
+}
+
+.open-home .opening {
+  z-index: 100;
+}
+
+/* .open-home .opening {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+} */
+
+.open-home h1.home-name span {
+  font-size: 55px;
+  font-family: "Bruno Ace SC", cursive;
+}
+.open-home span.name-one {
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: #ff2c95;
+  color: /*#ff2c95*/ var(--oke);
+}
+
+.open-home span.name-two {
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #ffc506;
+  color: #aa8715; /*#e7df93; */
+}
+
+.opening h3 {
+  /* color: #fff; #e7df93; */
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+.opening span.word-one {
+  color: #ffc506;
+  animation: flicker 3s infinite alternate;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #ffc506, 0 0 19px #ffc506, 0 0 40px #ffc506,
+      0 0 80px #ffc506, 0 0 100px #ffc506, 0 0 150px #ffc506;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.opening div.cd-intro {
+  font-size: 25px;
+}
+
+.opening span.cd-words-wrapper b {
+  color: #ff2c95;
+  text-shadow: 0 0 4px #ff2c95, 0 0 19px /*#fab3d6*/ #a0145a;
+}
+
+/* Tata letak kata-kata animasi */
+.cd-intro {
+  width: 90%;
+  max-width: 768px;
+  text-align: center;
+  color: #a0145a;
+}
+
+.cd-intro {
+  margin: 4em auto;
+}
+@media only screen and (min-width: 768px) {
+  .cd-intro {
+    margin: 5em auto;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-intro {
+    margin: 6em auto;
+  }
+}
+
+.cd-headline {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-headline {
+    font-size: 6rem;
+  }
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+
+/* Membuat animasi headline (merubah kata2 opening home berganti-ganti */
+.cd-headline.clip span {
+  display: inline-block;
+  padding: 0.2em 0;
+}
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+.cd-headline.clip .cd-words-wrapper::after {
+  /* line */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #aebcb9;
+}
+.cd-headline.clip b {
+  opacity: 0;
+}
+.cd-headline.clip b.is-visible {
+  opacity: 1;
+}
+
+/* Halaman About */
+
+.about {
+  padding: 20rem 7%;
+}
+
+/* Mengatur Posisi dan Ukuran Judul About */
+.about h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  -webkit-text-stroke-width: 1px;
+  --webkit-text-stroke-color: var(--navbar);
+}
+
+.about h2 span {
+  padding-right: 10px;
+  padding-bottom: 5rem;
+  color: var(--navbar);
+}
+
+.about h2 span.tajuk-about {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--navbar);
+  color: var(--bg);
+}
+
+.about .gweh-img img {
+  height: 60vh;
+  border-radius: 5%;
+}
+
+/* Tata letak foto dan narasi */
+
+.about .row {
+  display: flex;
+  justify-content: center;
+}
+
+.about .row .gweh-img {
+  flex: 1 1 10rem;
+  padding-right: 20px;
+}
+
+.about.row .narasi-about {
+  flex: 1 1 50rem;
+  padding: 20px 1rem;
+}
+
+.about .row .narasi-about h3 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.about .row .narasi-about h4 {
+  font-size: 23px;
+  margin-bottom: 7px;
+}
+
+.about .row .narasi-about p.p-one,
+p.p-two {
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Tata letak icon sosmed */
+.about .row .narasi-about p.sosmed {
+  justify-content: space-evenly;
+  margin-top: 30px;
+  padding: 7px 10px;
+  border: 1px solid var(--navbar);
+  width: 38%;
+}
+
+.about .row .narasi-about p.sosmed span i {
+  font-size: 27px;
+}
+
+.about .row .narasi-about p.sosmed span,
+i {
+  margin: 0px 5px;
+}
+
+/* EDU size judul font */
+.education h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: #ffc506;
+}
+
+.education h2 span.tajuk-education {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--navbar);
+  color: var(--bg);
+  padding-left: 10px;
+}
+
+.education .inti-education {
+  font-size: 20px;
+  font-family: "Gruppo", cursive;
+  color: var(--oke2);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+
+/* EDU CONTAINER */
+
+/* Size font untuk Sub Section EDU */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* Tombol Tabs Edu  */
+
+/* Tata Letak Container Edu */
+
+.container-edu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 35px 10%;
+  font-size: 14px;
+}
+
+/* Tata letak sub judul Edu */
+.container-edu .row-edu .title .complex {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.container-edu .title {
+  display: flex;
+  /* justify-content: space-evenly; */
+  align-content: center;
+}
+
+/* Style sub judul edu */
+.container-edu .title .complex h2 {
+  color: var(--navbar);
+  font-family: "Hachi Maru Pop", cursive;
+  font-size: 20px;
+}
+
+/* Style Content pada Row Edu */
+
+/* Tata letal item row EDU */
+.container-edu main.row-edu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+}
+
+/* Membuat line tepi kiri */
+.container-edu main.row-edu .column div.content {
+  padding: 0px 30px;
+  border-left: 2px solid var(--oke);
+}
+
+/* Style conten box item edu */
+.container-edu main.row-edu .column div.content .box {
+  color: var(--oke);
+  position: relative;
+  padding: 20px;
+  margin: 20px 0px;
+  border-radius: 20px;
+  border: 1px solid var(--oke);
+  background-color: var(--navbar);
+  /* Settingan lighting shadow */
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+/* lighting shadow */
+.container-edu main.row-edu .column div.content .box:hover {
+  .bookmark h2 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    color: #ffc506;
+  }
+  
+  .bookmark h2 span.tajuk-bookmark {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--navbar);
+    color: var(--bg);
+    padding-left: 10px;
+  }
+  
+  .bookmark .inti-bookmark {
+    font-size: 20px;
+    font-family: "Gruppo", cursive;
+    color: var(--oke2);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+    box-shadow: 0px 3px 12px 0px var(--oke);
+  border: 1px solid transparent;
+}
+
+/* element point bullets pada line */
+.container-edu main.row-edu .column div.content .box::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  right: calc(100% + 22px);
+  top: 0;
+  background-color: var(--navbar);
+  border: 2px solid var(--oke);
+}
+
+/* Section Bookmark */
+
+/* Title Text */
+.bookmark h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: #ffc506;
+}
+
+.bookmark h2 span.tajuk-bookmark {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--navbar);
+  color: var(--bg);
+  padding-left: 10px;
+}
+
+.bookmark .inti-bookmark {
+  font-size: 20px;
+  font-family: "Gruppo", cursive;
+  color: var(--oke2);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* Info Text */
+.bookmark .row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.bookmark .row .img-bookmark {
+  flex: 1 1 10rem;
+  padding-right: 20px;
+}
+
+.bookmark .row .narasi-bookmark h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-family: "Castoro Titling", cursive;
+}
+
+.bookmark .row .narasi-bookmark h5 {
+  font-size: 23px;
+  margin-bottom: 7px;
+}
+
+/* Size location */
+.bookmark .row .narasi-bookmark span {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.bookmark .row .narasi-bookmark span i {
+  font-size: 13px;
+}
+
+.bookmark .row .narasi-bookmark p {
+  font-size: 19px;
+  font-weight: 0;
+  padding: 15px 10px;
+  color: var(--navbar);
+  border-radius: 7%;
+  font-family: "Pompiere", cursive;
+  line-height: 1.6;
+  border: 3px solid var(--navbar);
+}
+
+/* Ukuran foto bookmark */
+.bookmark .row .img-bookmark img {
+  height: 60vh;
+  padding-bottom: 15px;
+}
+
+/* Tata Letak all in*/
+
+.bookmark {
+  padding: 20rem 7%;
+}
+
+/* Tata letak narasi */
+
+/* Section Bookmark */
+
+/* Title Text */
+.login h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: #ffc506;
+}
+
+.login h2 span.tajuk-login {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--navbar);
+  color: var(--bg);
+  padding-left: 10px;
+}
+
+.login .inti-login {
+  font-size: 20px;
+  font-family: "Gruppo", cursive;
+  color: var(--oke2);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* Responsive Breakpoint */
+
+/* Desktop - Laptop */
+@media screen and (max-width: 1920px) {
+  .navbar div.navbar-plus {
+    opacity: 0;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .navbar div.navbar-plus {
+    display: flex;
+    opacity: 1;
+    position: absolute;
+    right: 9.5%;
+  }
+
+  .navbar div.navbar-outside ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a0145a;
+    /* border-left: 6px solid #aa; */
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .navbar div.navbar-outside ul.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Ganti warna navbar */
+  .navbar div.navbar-outside a {
+    color: var(--navbar);
+  }
+
+  .navbar div.navbar-plus a {
+    color: #ff2c95;
+  }
+
+  .open-home h1.home-name span {
+    font-size: 40px;
+  }
+
+  .open-home span.name-one {
+    -webkit-text-stroke-width: 0.15px;
+  }
+
+  .open-home span.name-two {
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .about .row .gweh-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  /* Ukuran Section Edu */
+  .container-edu main.row-edu {
+    grid-template-columns: 1fr;
+  }
+
+  /* section bookmark */
+  .bookmark .row .img-bookmark img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bookmark .row {
+    flex-wrap: wrap;
+    font-size: 100%;
+  }
+}
+
+/* Mobile phone */
+@media screen and (max-width: 360px) {
+  .navbar div.navbar-plus {
+    opacity: 1;
+    display: flex;
+    position: absolute;
+    right: 9.5%;
+  }
+  .navbar div.navbar-outside ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a0145a;
+    /* border-left: 6px solid #aa; */
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .navbar div.navbar-outside ul.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Ganti warna navbar */
+  .navbar div.navbar-outside a {
+    color: var(--navbar);
+  }
+
+  .navbar div.navbar-plus a {
+    color: #ff2c95;
+    padding: 5px 0px;
+  }
+
+  .open-home h1.home-name span {
+    font-size: 20px;
+  }
+
+  .open-home span.name-one {
+    -webkit-text-stroke-width: 0.07px;
+  }
+
+  .open-home span.name-two {
+    -webkit-text-stroke-width: 0.5px;
+  }
+
+  .about .row .gweh-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Ukuran Section Edu */
+  .container-edu main.row-edu {
+    grid-template-columns: 1fr;
+  }
+
+  /* size font bookmark */
+  .bookmark .bookmark-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .bookmark .bookmark-item .bookmark-img img {
+    height: 10vh;
+  }
+
+  .bookmark .bookmark-item .bookmark-info {
+    flex-wrap: nowrap;
+    height: 80vh;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+  }
+
+  /* section bookmark */
+  .bookmark h2.bookmark-title span {
+    font-size: 90%;
+  }
+
+  .bookmark .row .img-bookmark img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bookmark .row {
+    flex-wrap: wrap;
+  }
+
+  .bookmark .row .narasi-bookmark h3 {
+    font-size: 100%;
+  }
+
+  .bookmark .row .narasi-bookmark h5 {
+    font-size: 100%;
+  }
+
+  .bookmark .row .narasi-bookmark span {
+    font-size: 100%;
+  }
+
+  .bookmark .row .narasi-bookmark p {
+    font-size: 100%;
+  }
+}
